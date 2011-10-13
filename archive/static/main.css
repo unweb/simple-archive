@@ -1,17 +1,19 @@
-ul.archiving {
+.year {
   font-size: 110%;
   font-weight: bold;
 }
 
-li.archiving {
+.month {
+
+}
+
+li.year {
   display: inline;
   font-weight: normal;
   padding-left: 2px;
 }
 
-.archiving-month {
-  padding-left: 10px;
-}
+
 a.toggle {
   text-decoration: none;
 }

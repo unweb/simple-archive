@@ -1,70 +1,30 @@
 <!-- js taken from http://theopensourcery.com/jsdomexpander.htm -->
 
-<script type='text/javascript'>
-  var ii=0;
-  bb="nothinh";
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/main.css" />
+    <script type="text/javascript" src="../static/jquery-1.6.3.min.js"></script> 
+</head>
 
-function jsdomexpand(where){
-  tem=document.getElementById(where);
-  if(tem == null)return;
-  tem.style.display="none";
-  var id2=where +"hidden";
-  tem=document.getElementById(id2);
-  tem.style.display="block";
-}  
-
-function jsdomclose(where){
-  tem=document.getElementById(where);
-  if(tem == null)return;
-  tem.style.display="block";
-  var id2=where +"hidden";
-  tem=document.getElementById(id2);
-  tem.style.display="none";
-}   
-</script>
-
-{% for event_year in list_events %}
-  <ul class="archiving">{{event_year.keys.0}}<br>
-
-  <div class="archiving-month">
-  {% for month, events in event_year.values.0.items %}
-    {% if events %} <!--show only months with events! -->
-    <div id="toggle-{{event_year.keys.0}}-{{month}}">
-      <a class="toggle" href="javascript:void(0)">
-      <span class="zippy" align="left" title="press to expand!"
-          onclick="jsdomexpand('toggle-{{event_year.keys.0}}-{{month}}');">
-          ►&nbsp;
-      <li class="archiving">{{events.0.date|date:"F" }} ({{events|length}})
-      </li>
-      </span></a>
-    </div>
-    <div id="toggle-{{event_year.keys.0}}-{{month}}hidden"
-      style="display:none;">
-      <a class="toggle" href="javascript:void(0)">
-      <span class="zippy toggle-open" align="left" title="press to collapse"
-         onclick="jsdomclose('toggle-{{event_year.keys.0}}-{{month}}');">
-         ▼&nbsp;</span></a>
-         <span class="open"-month>
-              {{events.0.date|date:"F" }} ({{events|length}})
-         </span>
-      <ul class="archiving-inside">
-      {% for event in events %}
-        <li class="archiving-inside">
-        <a href="/events/{{event.name}}">{{event.name}}</a>
-        <br>
-        </a>
-        <br>
-        {{event.place}}, {{event.date|date:"j M Y"}}
-      </li>{% endfor %}
-      </ul>
-    </div>
-    {% endif %}
-  {% endfor %}
-  </div> <!--archiving monthly -->
-  </ul>
-{% endfor %}
+<body>
+    {% for event_year in list_events %}
+        <ul class="year">{{event_year.keys.0}}
+            {% for month, events in event_year.values.0.items %}
+                <!--show only months with events! -->
+                {% if events %} 
+                    <li class="month">
+                        <a>{{events.0.date|date:"F" }} ({{events|length}})</a>
+                        {% for event in events %}
+                            <a href="/events/{{event.name}}">{{event.name}}</a>
+                            {{event.place}}, {{event.date|date:"j M Y"}}
+                        {% endfor %}
+                    </li>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
 
 <script>
-<!-- expand the current month -->
- jsdomexpand('toggle-{{now.year}}-{{now.month}}') 
+    // expand the current month
 </script>
