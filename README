@@ -1,1 +1,13 @@
-The code for our simple django archive blog post
+Instructions
+------------
+
+1. Create a virtual environment for your project and install django
+
+$ virtualenv --python=python2.6 --no-site-packages ./django-test
+$ cd django-test
+django-test$ ./bin/pip install django
+
+2. Clone this repo
+
+django-test$ git clone http://cpsaltis@github.com/unweb/simple-archive.git ./simple-archive
+
