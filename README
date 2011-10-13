@@ -11,3 +11,9 @@ django-test$ ./bin/pip install django
 
 django-test$ git clone http://cpsaltis@github.com/unweb/simple-archive.git ./simple-archive
 
+3. Populate database and run the app
+
+django-test$ ./bin/python simple-archive/manage.py syncdb
+django-test$ ./bin/python simple-archive/manage.py runserver
+
+This also loads some fixtures for putting some initial content
