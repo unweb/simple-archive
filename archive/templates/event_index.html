@@ -12,11 +12,17 @@
                 <!--show only months with events! -->
                 {% if events %} 
                     <li class="month">
-                        <a>{{events.0.date|date:"F" }} ({{events|length}})</a>
+                        <span class="month-name">{{events.0.date|date:"F"}}</span>
+                        <span class="event-counter"> ({{events|length}})</span>
+                        <ul class="events">
                         {% for event in events %}
-                            <a href="/events/{{event.name}}">{{event.name}}</a>
-                            {{event.place}}, {{event.date|date:"j M Y"}}
+                            <li class="event">
+                            <a class="title" href="/events/{{event.name}}">{{event.name}}</a>
+                            <div class="date">{{event.date|date:"j M Y"}}</div>
+                            <div class="place">{{event.place}}</div> 
+                            </li>
                         {% endfor %}
+                        </ul>
                     </li>
                 {% endif %}
             </li>
