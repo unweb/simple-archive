@@ -1,0 +1,102 @@
+[
+    {
+        "model": "archive.Event",
+        "pk": 1,
+        "fields": {
+            "name": "Yiann Tiersen",
+            "place": "Kyttaro Live, Athens",
+            "date": "2011-10-06"
+        }
+    },
+    {
+        "model": "archive.Event",
+        "pk": 2,
+        "fields": {
+            "name": "Elvis Costello",
+            "place": "Megaro Mousikis, Athens",
+            "date": "2011-02-06"
+        }
+    },
+
+    {
+        "model": "archive.Event",
+        "pk": 3,
+        "fields": {
+            "name": "Francesco Mendolia",
+            "place": "Gagarin, Athens",
+            "date": "2011-03-06"
+        }
+    },
+
+    {
+        "model": "archive.Event",
+        "pk": 4,
+        "fields": {
+            "name": "Yiann Tiersen",
+            "place": "Megaro Mousikis, Thessaloniki",
+            "date": "2011-02-06"
+        }
+    },
+
+    {
+        "model": "archive.Event",
+        "pk": 5,
+        "fields": {
+            "name": "THE METROPOLITAN OPERA HD LIVE",
+            "place": "Moni Lazaristwn, Thessaloniki",
+            "date": "2011-02-06"
+        }
+    },
+
+    {
+        "model": "archive.Event",
+        "pk": 6,
+        "fields": {
+            "name": "Savina Yannatou and Kostas Grigoréas",
+            "place": "Fuzz Club, Athens",
+            "date": "2011-02-06"
+        }
+    },
+
+    {
+        "model": "archive.Event",
+        "pk": 7,
+        "fields": {
+            "name": "Apocalyptica",
+            "place": "Akti Dimaiwn, Patra",
+            "date": "2011-02-06"
+        }
+    },
+
+    {
+        "model": "archive.Event",
+        "pk": 8,
+        "fields": {
+            "name": "Mogwai",
+            "place": "Odeio Irwdi Attikou, Athens",
+            "date": "2011-02-06"
+        }
+    },
+
+    {
+        "model": "archive.Event",
+        "pk": 9,
+        "fields": {
+            "name": "Pink Floyd",
+            "place": "Epidauros",
+            "date": "2011-02-06"
+        }
+    },
+
+    {
+        "model": "archive.Event",
+        "pk": 10,
+        "fields": {
+            "name": "Amparanoia",
+            "place": "Theatro Gis, Thessaloniki",
+            "date": "2010-06-06"
+        }
+    }
+
+]
+

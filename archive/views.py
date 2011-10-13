@@ -1,6 +1,7 @@
 # Create your views here.
 
 from django.template import Context, loader
+from django.http import HttpResponse
 import datetime
  
 from models import Event
