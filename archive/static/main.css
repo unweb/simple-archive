@@ -1,0 +1,28 @@
+ul.archiving {
+  font-size: 110%;
+  font-weight: bold;
+}
+
+li.archiving {
+  display: inline;
+  font-weight: normal;
+  padding-left: 2px;
+}
+
+.archiving-month {
+  padding-left: 10px;
+}
+a.toggle {
+  text-decoration: none;
+}
+
+ul.archiving-inside {
+  padding-left: 20px;
+}
+
+li.archiving-inside {
+  border-bottom: 1px solid #CCCCCC;
+  font-size: 90%;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
