@@ -14,7 +14,7 @@
                     <li class="month">
                         <span class="month-name">{{events.0.date|date:"F"}}</span>
                         <span class="event-counter"> ({{events|length}})</span>
-                        <ul class="events">
+                        <ul class="events" style="display:none;">
                         {% for event in events %}
                             <li class="event">
                             <a class="title" href="/events/{{event.name}}">{{event.name}}</a>

@@ -3,28 +3,6 @@
   font-weight: bold;
 }
 
-.month {
+ul.events {
 
-}
-
-li.year {
-  display: inline;
-  font-weight: normal;
-  padding-left: 2px;
-}
-
-
-a.toggle {
-  text-decoration: none;
-}
-
-ul.archiving-inside {
-  padding-left: 20px;
-}
-
-li.archiving-inside {
-  border-bottom: 1px solid #CCCCCC;
-  font-size: 90%;
-  font-weight: normal;
-  margin-bottom: 10px;
 }
