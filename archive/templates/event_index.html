@@ -2,7 +2,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="../static/main.css" />
-    <script type="text/javascript" src="../static/jquery-1.6.3.min.js"></script> 
+    <script type="text/javascript" src="../static/jquery.min.js"></script> 
 </head>
 
 <body>
@@ -11,7 +11,7 @@
             {% for month, events in event_year.values.0.items %}
                 <!--show only months with events! -->
                 {% if events %} 
-                    <li class="month">
+                    <li id="{{event_year.keys.0}}-{{month}}" class="month">
                         <span class="month-name">{{events.0.date|date:"F"}}</span>
                         <span class="event-counter"> ({{events|length}})</span>
                         <ul class="events" style="display:none;">
@@ -33,4 +33,5 @@
 
 <script>
     // expand the current month
+    $("#{{now.year}}-{{now.month}} ul.events").show(); 
 </script>
