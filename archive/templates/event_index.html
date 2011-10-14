@@ -12,12 +12,14 @@
                 <!--show only months with events! -->
                 {% if events %} 
                     <li id="{{event_year.keys.0}}-{{month}}" class="month">
-                        <span class="month-name">{{events.0.date|date:"F"}}</span>
-                        <span class="event-counter"> ({{events|length}})</span>
+                        <div class="month-data">
+                            <span class="name">{{events.0.date|date:"F"}}</span>
+                            <span class="counter"> ({{events|length}})</span>
+                        </div>
                         <ul class="events" style="display:none;">
                         {% for event in events %}
                             <li class="event">
-                            <a class="title" href="/events/{{event.name}}">{{event.name}}</a>
+                            <a class="title" href="#">{{event.name}}</a>
                             <div class="date">{{event.date|date:"j M Y"}}</div>
                             <div class="place">{{event.place}}</div> 
                             </li>
@@ -33,5 +35,9 @@
 
 <script>
     // expand the current month
-    $("#{{now.year}}-{{now.month}} ul.events").show(); 
+    $("#{{now.year}}-{{now.month}} ul.events").show();
+    // toggle events on click
+    $('.month-data').click(function() {
+        $(this).next().slideToggle('slow');
+    }); 
 </script>

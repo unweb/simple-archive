@@ -1,8 +1,39 @@
+ul, li {
+    list-style: none outside none;
+}
+
 .year {
   font-size: 110%;
   font-weight: bold;
 }
 
-ul.events {
+.month {
+    width: 300px;
+    font-size:100%;
+    font-weight:normal;
+    margin: 10px;
+}
+
+div.month-data:hover {
+    cursor: pointer;
+}
+
+li.event {
+    margin: 5px;
+    list-style: circle;
+}
+
+a.title, div.date, div.place {
+    padding: 5px;
+}
+
+a.title {
+}
+
+div.date {
+    font-size:70%;
+}
+
+div.place {
 
 }
