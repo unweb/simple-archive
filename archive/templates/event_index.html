@@ -3,14 +3,6 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../static/main.css" />
     <script type="text/javascript" src="../static/jquery.min.js"></script>
-    <!-- resusable toggling -->
-    <script>
-        var toggleMonth = function(month) {
-            $(month).children('.events').slideToggle('slow');
-            $(month).find('.month-data div.collapsed').toggle();
-            $(month).find('.month-data div.expanded').toggle(); 
-        }
-    </script> 
 </head>
 
 <body>
@@ -44,6 +36,13 @@
 </body>
 
 <script>
+    // toggle month
+    var toggleMonth = function(month) {
+        $(month).children('.events').slideToggle('slow');
+        $(month).find('.month-data div.collapsed').toggle();
+        $(month).find('.month-data div.expanded').toggle(); 
+    }
+
     // expand the current month
     toggleMonth($('#{{now.year}}-{{now.month}}'));
     
