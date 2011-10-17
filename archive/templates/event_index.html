@@ -1,5 +1,3 @@
-<!-- js taken from http://theopensourcery.com/jsdomexpander.htm -->
-
 <head>
     <link rel="stylesheet" type="text/css" href="../static/main.css" />
     <script type="text/javascript" src="../static/jquery.min.js"></script> 
@@ -13,6 +11,7 @@
                 {% if events %} 
                     <li id="{{event_year.keys.0}}-{{month}}" class="month">
                         <div class="month-data">
+                            <span class="pointer">►&nbsp;</span>
                             <span class="name">{{events.0.date|date:"F"}}</span>
                             <span class="counter"> ({{events|length}})</span>
                         </div>
@@ -39,5 +38,6 @@
     // toggle events on click
     $('.month-data').click(function() {
         $(this).next().slideToggle('slow');
+        // show to ▼&nbsp;
     }); 
 </script>
