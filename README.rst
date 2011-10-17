@@ -1,28 +1,19 @@
-============
 Instructions
 ============
 
-1. Create a virtual environment for your project and install django
--------------------------------------------------------------------
+First, create a virtual environment and install django::
 
-``$ virtualenv --python=python2.6 --no-site-packages ./django-test``
+    $ virtualenv --python=python2.6 --no-site-packages ./django-test
+    $ cd django-test
+    django-test$ ./bin/pip install django
 
-``$ cd django-test``
+Then get the code::
 
-``django-test$ ./bin/pip install django``
+    django-test$ git clone http://cpsaltis@github.com/unweb/simple-archive.git ./simple-archive
 
-2. Clone this repository
-------------------------
+Finally, populate the database and run the app::
 
-``django-test$ git clone http://cpsaltis@github.com/unweb/simple-archive.git ./simple-archive``
-
-3. Populate the database and run the app
-----------------------------------------
-
-``django-test$ cd simple-archive``
-
-``django-test$ ../bin/python manage.py syncdb``
-
-``django-test$ ../bin/python manage.py loaddata fixtures``
-
-``django-test$ ../bin/python manage.py runserver``
+    django-test$ cd simple-archive
+    django-test$ ../bin/python manage.py syncdb
+    django-test$ ../bin/python manage.py loaddata fixtures
+    django-test$ ../bin/python manage.py runserver
