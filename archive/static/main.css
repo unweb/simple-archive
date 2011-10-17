@@ -27,13 +27,20 @@ a.title, div.date, div.place {
     padding: 5px;
 }
 
-a.title {
-}
-
 div.date {
     font-size:70%;
 }
 
 div.place {
+    padding-top:0;
+}
 
+div.collapsed, div.expanded {
+    float:left;
+    margin-top:-2px;
+}
+
+div.expanded {
+    font-size:80%;
+    margin-right:5px
 }

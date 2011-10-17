@@ -1,6 +1,14 @@
 <head>
     <link rel="stylesheet" type="text/css" href="../static/main.css" />
-    <script type="text/javascript" src="../static/jquery.min.js"></script> 
+    <script type="text/javascript" src="../static/jquery.min.js"></script>
+    <!-- toggling -->
+    <script>
+        var toggleMonth = function(month) {
+            $(month).children('.events').slideToggle('slow');
+            $(month).find('.month-data div.collapsed').toggle();
+            $(month).find('.month-data div.expanded').toggle(); 
+        }
+    </script> 
 </head>
 
 <body>
@@ -11,7 +19,8 @@
                 {% if events %} 
                     <li id="{{event_year.keys.0}}-{{month}}" class="month">
                         <div class="month-data">
-                            <span class="pointer">►&nbsp;</span>
+                            <div class="collapsed">►&nbsp;</div>
+                            <div class="expanded" style="display:none;">▼&nbsp;</div>
                             <span class="name">{{events.0.date|date:"F"}}</span>
                             <span class="counter"> ({{events|length}})</span>
                         </div>
@@ -34,10 +43,11 @@
 
 <script>
     // expand the current month
-    $("#{{now.year}}-{{now.month}} ul.events").show();
-    // toggle events on click
+    toggleMonth($('#{{now.year}}-{{now.month}}'));
+    
+    // intercept click to toggle month
     $('.month-data').click(function() {
-        $(this).next().slideToggle('slow');
-        // show to ▼&nbsp;
-    }); 
+        var month = $(this).parent();
+        toggleMonth(month);
+    });
 </script>
